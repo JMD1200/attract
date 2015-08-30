@@ -246,12 +246,19 @@ Exit menu;Quitter le menu
 
 _sort_regexp;^(Vs\. The |The |Vs\. )
 
+
+System Identifier;Identifiant du système
+Info Source/Scraper;Info Source/Scraper
+Minimum Run Time;Temps minimum fonctionnement
+
+_help_emu_system;Identifiant(s) système(s) pour cet émulateur. Plusieurs valeurs peuvent être saisies, séparées par un point virgule
+_help_emu_info_source;Saisir "mame" si cet émulateur propose un fichier de type mame -listxml, "mess" pour les fichiers du type mess -listsoftware, "thegamesdb.net" pour extraire les informations du site thegamesdb.net, ou "steam" pour les lires depuis une installation de steam. Les sources "mess" et "thegamesdb.net" nécessitent que des identifiants systèmes spécifiques soient configurés pour fonctionner correctement
+_help_emu_minimum_run_time;Définit un temps minimum de fonctionnement (en secondes). Attract-Mode va attendre, après avoir lancé l'émulateur, que ce temps minimum se soit écoulé avant de re-basculer au premier plan. Ceci est nécessaire pour que Steam fonctionne correctement sous Windows. Saisir 0 si vous n'en avez pas besoin
+
 #
 # Strings needing translation:
 #
-System Identifier;System Identifier
-Info Source/Scraper;Info Source/Scraper
-Minimum Run Time;Minimum Run Time
+
 Exit Hotkey;Exit Hotkey
 Sort By;Sort By
 No Sort;No Sort
@@ -282,9 +289,6 @@ Window;Window
 Global Filter;Global Filter
 Disabled;Disabled
 
-_help_emu_system;The system identifier(s) for this emulator.  Multiple values can be entered if separated by a semicolon
-_help_emu_info_source;Use "mame" if the emulator provides mame -listxml output, "mess" for mess -listsoftware output, "thegamesdb.net" to scrape data from thegamesdb.net, or "steam" to read from a steam installation.  "mess" and "thegamesdb.net" also require that a System Identifier recognized by those sources be configured
-_help_emu_minimum_run_time;Set a minimum run time (in seconds).  Attract-Mode will wait after running this emulator until the minimum time has expired and it becomes the foreground window.  This needs to be set for Steam to work correctly on Windows.  Set this to 0 unless you know you need it
 _help_emu_exit_hotkey;Set a global hotkey to exit the emulator.  Attract-Mode will terminate the emulator process if this hotkey gets pressed
 _help_filter_sort_by;The game information attribute that you wish to sort this list by.  Set to "No Sort" to keep the ordering from the source romlist
 _help_filter_list_limit;Set this to a non-zero value if you wish to limit the size of a sorted list.  Use a positive value for the first X entries (i.e. "10" gives the first 10 entries), a negative value for the last X entries (i.e. "-25" gives the last 25 entries), or "0" for no limit
